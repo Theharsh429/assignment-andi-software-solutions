@@ -1,0 +1,254 @@
+/* Reset some default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+   
+    font-family:  "Roboto Condensed",Arial,Helvetica,sans-serif;
+
+}
+.main-carousal{
+  display: flex;
+  justify-content: center;
+}
+.carousal{
+  width: 90%;
+  height: 100% ;
+  display: grid;
+  place-items: center;
+  padding-bottom: 1rem;
+}
+
+.slider{
+  width: 100%;
+  height: 50vh;
+  background-image: url(./assets/banner1.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+  animation: changeImage 30s  infinite;
+  
+}
+
+@keyframes changeImage {
+  /* 0%{
+    background-image: url(./assets/banner1.png);
+  } */
+ 
+ 
+  50%{
+   
+    background-image: url(./assets/banner2.jpg);
+  }
+
+
+
+  
+}
+ @media screen and (max-width: 450px) {
+   .slider{
+    height:30vh
+   }
+ }
+
+
+/* --------------------------------------------------------------------------- */
+
+.floating-text-container {
+    position: relative;
+    width: 100vw;
+    height: 10vh;
+    /* overflow-x: visible; */
+
+   /* Background color for the container */
+
+}
+.floating-text{
+  padding: 1rem;
+}
+.floating-text > a{
+    color: #007bff;
+    padding: 1rem;
+    font-size: large;
+    
+}
+
+.floating-text > a :hover{
+ color: blue;
+}
+
+
+
+
+
+
+/* Header styles */
+.arrow_container {
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 20px 0;
+}
+
+.arrow_container h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.arrow_container div{
+    background-color: #E7171F;
+    height: 0.1rem;
+    width : 3rem;
+}
+
+/* Main content styles */
+main {
+    max-width: 75%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.arrow{
+    background-color: #E7171F;
+    height: 0.1rem;
+    width : 3rem;
+}
+.about-section {
+    margin-bottom: 30px;
+}
+
+.about-section h2 {
+    font-size: 24px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.about-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-section li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
+footer {
+    background-color: black;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  footer * {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+  }
+  .row {
+    padding: 2em 1em;
+  }
+  .row.primary {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    align-items: stretch;
+  }
+  .column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    min-height: 15em;
+  }
+  h3 {
+    width: 100%;
+    text-align: left;
+    color: hwb(358 4% 9%);
+    font-size: 1.6em;
+    white-space: nowrap;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  li:not(:first-child) {
+    margin-top: 0.8em;
+  }
+  ul li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  ul li a:hover {
+    color: hwb(358 4% 9%);
+  }
+  .about p {
+    text-align: justify;
+    line-height: 2;
+    margin: 0;
+  }
+  input,
+  button {
+    font-size: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  button {
+    background-color: hwb(358 4% 9%);
+    color: #ffffff;
+  }
+  div.social {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.4em;
+    flex-direction: row;
+    margin-top: 0.5em;
+  }
+  .social i:hover {
+    color: hwb(358 4% 9%);
+  }
+  .row.secondary {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .row.secondary i {
+    font-size: 1.8em;
+    color: hwb(358 4% 9%);
+  }
+  .row.secondary div {
+    padding: 1em 0;
+    width: 100%;
+  }
+  .row.secondary div:hover {
+    background-color: #25262e;
+  }
+  .copyright {
+    padding: 0.3em 1em;
+    background-color: #25262e;
+  }
+  .copyright p {
+    font-size: 0.9em;
+    text-align: center;
+  }
+  @media screen and (max-width: 850px) {
+    .row.primary {
+      grid-template-columns: 1fr;
+    }
+    .row.secondary {
+      flex-direction: column;
+    }
+  }
